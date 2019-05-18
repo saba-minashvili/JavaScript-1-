@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>    
+</head>
+<body>
+    <script>
+        let arr = [5,9,7,8,4,8,15];
+        let cnt = 0;
+        let sum = 0;
+        let max = Math.max(...arr);
+        let sum2 = 0;
+
+        // N1 დავალება
+        console.log("უდიდესი რიცხვია: " + max);
+        
+        // N2 დავალება
+        for (let i = 0; i < arr.length; i++) {
+           if (arr[i] % 3 == 0) {
+               cnt++;
+               sum = sum + arr[i];
+           }
+        }
+        console.log("3_ის ჯერადი რიცხვების რაოდენობაა: " + cnt);
+        console.log("3_ის ჯერადი რიცხვების ჯამია: " + sum);
+
+
+        // N3 დავალება
+        for (let i = arr.length-1; i >= arr.length-3; i--) {
+           sum2 = sum2 + arr[i];
+        }
+        console.log("ბოლო სამი რიცხვის ჯამია: " + sum2);
+
+
+        // N4 დავალება
+        for (let i = 0; i <= arr.length-1; i = i + 2) {
+            console.log("ლუწ ინდექსზე მყოფი ელემენტებია: " + arr[i]);
+        }
+    </script>
+
+
+    <!-- // 1. მასივში მაქსიმალური ელემენტის პოვნა. მაგ. arr ში პასუხი არის 9 - 5 ქ. 
+
+    // 2. დამითვალეთ მასივში 3 ჯერადი რიცხვების რაოდენობა და მათი ჯამი - 2 ქ.
+ 
+    // 3. დამითვალეთ ბოლო 3 ელემენტის ჯამი; - 3 ქ 
+ 
+    // 4. დაბეჭდეს ლუწ ინდექსზე მყოფი ელემენტები- 2ქ -->
+ 
+</body>
+</html>
